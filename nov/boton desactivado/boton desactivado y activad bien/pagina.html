@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <title>Prueba</title>
+</head>
+
+<body>
+
+<progress style="width: 1020px; padding-left: 300px;"   height= 650px id="file" max="100" value="0"> 0% </progress>
+    <br>
+
+    <div id="contenido" style="margin-left:100px">
+
+            <h2>ejer</h2>
+
+            <form>
+                <input id="entrada1" >
+            </form>
+            
+            <br>
+            <button id="boton1" class="btn btn-primary btn-lg" disabled onclick="guardarfrase()" >confirmar</button>
+            
+            <button onclick="mostrar('ejer1.txt')" class="btn btn-primary btn-lg"  >el que sigue1</button>
+
+            <script>
+
+                document.getElementById('entrada1').oninput = function() {
+                    if (document.getElementById('entrada1').value != ''){
+                        document.getElementById('boton1').disabled = false;
+                    }else{
+                        document.getElementById('boton1').disabled = true;
+                    }
+                }
+
+                function mostrar(ejercicio) {
+                    fetch(ejercicio)
+                        .then(response => response.text())
+                        .then(datos => document.getElementById("contenido").innerHTML = datos);
+                }
+                
+                function guardarfrase() {
+                    let guardar;
+                    let inicio = 20;
+                    guardar=document.getElementById("entrada1").value;
+                    if (guardar =="uno") {
+                        document.getElementById('file').value += inicio;
+                        alert("bien");
+                    } else {
+                        alert("mal");
+                    }
+                }
+            </script>
+    </div>
+    <br>
+
+</body>
+</html>

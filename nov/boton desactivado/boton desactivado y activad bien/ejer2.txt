@@ -1,0 +1,12 @@
+<h2>ejer3</h2>
+
+<form>
+    <p>Ingrese nombre:<input type="text" id="entrada3"></p>
+</form>
+
+<br>
+<button id="resp1" value="tres">tres</button>
+<button id="borrar" value="borrar">borrar</button>
+<button id="boton3" >Comprobar</button>
+
+ <button onclick="mostrar('ejer4.txt')" > el que sigue </button>

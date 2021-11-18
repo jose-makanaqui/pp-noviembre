@@ -1,0 +1,10 @@
+<h2>ejer2</h2>
+
+<form action="">
+    <input id="entrada2" >
+</form>
+
+<br>
+<button onclick="guardarfrase2()" >confirmar</button>
+
+<button id="boton3" onclick="mostrar('ejer3.txt')"> el que sigue2 </button>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        document.onkeydown = function(e) {
+        if (e.keyCode === 116) {
+        return false;
+        }
+        if (e.keyCode === 82) {
+        return false;
+        }
+        if (e.key == 1) {
+        document.getElementById('entrada3').value = document.getElementById('b3').value;
+        }
+        if (e.key == 2) {
+        document.getElementById('entrada3').value = document.getElementById('b4').value;
+        }
+        if (e.key == 3) {
+        document.getElementById('entrada3').value = document.getElementById('b5').value;
+        }
+        if (e.key == "Enter") {
+            if (document.getElementById("entrada3").value =="cinco") {
+                document.getElementById('file').value += 20;
+                alert("bien");
+            }else {
+                alert("mal");
+            }
+        }
+    };
+
+    function boton1() {
+        document.getElementById('entrada3').value = document.getElementById('b3').value;
+    }
+        
+    function boton2() {
+        document.getElementById('entrada3').value = document.getElementById('b4').value;
+    }
+
+    function boton3() {
+        document.getElementById('entrada3').value = document.getElementById('b5').value;
+    }
+
+    function comprobar3() {
+        if (document.getElementById("entrada3").value =="cinco") {
+            document.getElementById('file').value += 20;
+            alert("bien");
+        } else {
+            alert("mal");
+        }
+      }
+    </script>
+
+</head>
+<body>
+
+    <progress style="width: 1020px; padding-left: 300px;" height= 650px id="file" max="100" value="0"> 0% </progress>
+    <br>
+
+    <h2>ejer3</h2>
+
+    <form>
+        <p>Ingrese nombre:<input type="text" autocomplete="off" id="entrada3"></p>
+    </form>
+    
+    <br>
+    <button id="b3" onclick="boton1()" value="tres">tres</button>
+    <button id="b4" onclick="boton2()" value="cuatro">cuatro</button>
+    <button id="b5" onclick="boton3()" value="cinco">cinco</button>
+    <button id="boton-comprobar" onclick="comprobar3()" >Comprobar</button>
+    
+</body>
+</html>

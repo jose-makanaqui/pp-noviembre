@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <progress style="width: 1020px; padding-left: 300px;"   height= 650px id="file" max="100" value="0"> 0% </progress>
+    <br>
+
+
+    <div id="contenido">
+
+            <h2>ejer1</h2>
+
+            <form action="">
+                <input id="entrada1" >
+            </form>
+            
+            <br>
+            <button onclick="guardarfrase()" >confirmar</button>
+            
+            <button id="boton1" onclick="mostrar('ejer2.txt')">el que sigue</button>
+
+    </div>
+    <br>
+
+    <script>
+
+        function mostrar(ejercicio) {
+            fetch(ejercicio)
+                .then(response => response.text())
+                .then(datos => document.getElementById("contenido").innerHTML = datos);
+        }
+
+
+        function guardarfrase() {
+            let guardar;
+            let inicio = 20;
+            guardar=document.getElementById("entrada1").value;
+            if (guardar =="uno") {
+                document.getElementById('file').value += inicio;
+                alert("bien");
+            } else {
+                alert("mal");
+            }
+        }
+
+        function guardarfrase2() {
+            let guardar2;
+            let inicia = 20;
+            guardar2=document.getElementById("entrada2").value;
+            if (guardar2 =="dos") {
+                document.getElementById('file').value += inicia;
+                alert("bien");
+            } else {
+                alert("mal");
+            }
+        }
+
+        function boton1() {
+            let bot1 = document.getElementById('b1').value;
+            document.getElementById('entrada3').value = bot1;
+        }
+
+        function boton2() {
+            let bot2 = "";
+            document.getElementById('entrada3').value = bot2;
+        }
+
+        function comprobar3() {
+            let inicie = 20;
+            let guardar3 = document.getElementById("entrada3").value;
+            if (guardar3 == "tres") {
+                document.getElementById('file').value += inicie;
+                alert("bien");
+            }else{
+                alert("bien");
+            }
+        }
+
+        //https://www.tutorialesprogramacionya.com/javascriptya/temarios/descripcion.php?inicio=60&cod=71
+        // es el link de donde esta la info del método asociado al addEventListener
+        function concatenar(objeto) {
+        document.getElementById('resp').value = objeto.value
+        }
+
+        function comprobar() {
+            let inicio = 20;
+            let guardar = document.getElementById('resp').value;
+            if (guardar == 4) {
+                document.getElementById('file').value += inicio;
+                alert("bien");
+            }else{
+                alert("mal");
+            }
+        }
+
+    </script>
+
+</body>
+</html>

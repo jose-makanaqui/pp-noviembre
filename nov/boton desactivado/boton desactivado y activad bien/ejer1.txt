@@ -1,0 +1,31 @@
+<h2>ejer2</h2>
+
+<form>
+    <input id="entrada2" >
+</form>
+
+<br>
+<button id="boton2" class="btn btn-primary btn-lg" onclick="guardarfrase2()" >confirmar </button>
+
+<button onclick="mostrar('ejer2.txt')" class="btn btn-primary btn-lg" > el que sigue2 </button>
+
+<script>
+    function mostrar(ejercicio) {
+    fetch(ejercicio)
+        .then(response => response.text())
+        .then(datos => document.getElementById("contenido").innerHTML = datos);
+}
+
+function guardarfrase2() {
+        let guardar2;
+        let inicia = 20;
+        guardar2=document.getElementById("entrada2").value;
+        if (guardar2 =="dos") {
+            document.getElementById('file').value += inicia;
+            alert("bien");
+            } else {
+            alert("mal");
+            }
+        }
+
+</script>

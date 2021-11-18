@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+        <h2>ejer3</h2>
+
+        <form>
+            <p>Ingrese nombre:<input type="text" id="entrada3"></p>
+        </form>
+        
+        <br>
+        <button id="b3" onclick="boton1()" value="tres">tres</button>
+        <button id="b4" onclick="boton2()" value="cuatro">cuatro</button>
+        <button id="b5" onclick="boton2()" value="cinco">cinco</button>
+        <button id="boton-comprobar" onclick="comprobar3()" >Comprobar</button>
+
+        <script>
+        
+        document.addEventListener('keydown', (e) => {
+        let tecla = e.key
+        if (tecla == 1) {
+            let bot1 = document.getElementById('b3').value;
+            document.getElementById('entrada3').value = bot1;
+        }
+        })
+        
+        document.addEventListener('keydown', (e) => {
+        let tecla = e.key
+        if (tecla == 2) {
+            let bot2 = document.getElementById('b4').value;
+            document.getElementById('entrada3').value = bot2;
+        }
+        })
+
+        document.addEventListener('keydown', (e) => {
+        let tecla = e.key
+        if (tecla == 3) {
+            let bot3 = document.getElementById('b5').value;
+            document.getElementById('entrada3').value = bot3;
+        }
+        })
+
+        </script>
+    
+</body>
+</html>
