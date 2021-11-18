@@ -1,0 +1,12 @@
+<h2>ejer4</h2>
+
+    <form>
+        <p>Ingrese respuesta:<input type="text" id="entrada4" autocomplete="off"></p>
+    </form>
+
+    <input type="button" name="boton1" value="1" onclick="concatenar(this)">
+    <input type="button" name="boton2" value="2" onclick="concatenar(this)">
+    <input type="button" name="boton3" value="3" onclick="concatenar(this)">
+    <input type="button" name="boton4" value="4" onclick="concatenar(this)">
+    
+    <button id="boton-comprobar4" onclick="comprobar4()" >Comprobar</button>
